@@ -1,0 +1,8 @@
+# Binaries
+# --------
+*.dll
+*.exe
+
+# MinGW generated files
+*.Debug
+*.Release
