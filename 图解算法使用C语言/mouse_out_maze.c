@@ -92,7 +92,7 @@ int main(int argc, char const *argv[])
     printf("[迷宫模拟图（0表示墙，2表示入口，3表示出口）]\n");  /* 打印出迷宫的路径图 */
     for (int i=0; i<10; i++) {
         for (int j=0; j<12; j++) {
-            printf("%2d", MAZE[i][j])
+            printf("%2d", MAZE[i][j]);
         }
         printf("\n");
     }
@@ -114,7 +114,7 @@ int main(int argc, char const *argv[])
             break;
         } else {
             MAZE[x][y] = 2;
-            path = push(path, &x, &y);
+            path = push(path, x, y);
         }
     }
 
