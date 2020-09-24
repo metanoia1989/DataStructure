@@ -7,3 +7,12 @@
  * 最小堆 max-heap：任意一个父节点的值，都小于或等于其左右子节点的值
  * heap 最关键的是heapify，构建heap、插入节点、删除节点，都要经过heapify。
  */ 
+
+class Heap
+{
+public:
+private:
+    int *harr; // 
+    int capacity; // 堆的容量
+    int count; // 堆的元素大小
+};
