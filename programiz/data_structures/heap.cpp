@@ -46,7 +46,8 @@ public:
 
     /**
      * 从数组构建堆，从最后一个非叶子节点依次做下沉处理
-     * 数组保存的是完全二叉树层序遍历的结果，找到最后一个非叶子节点的位置，并对每个非叶节点反向层次顺序执行堆化操作
+     * 数组保存的是完全二叉树层序遍历的结果，找到最后一个非叶子节点的位置，
+     * 并对每个非叶节点反向层次顺序执行堆化操作
      * 最后一个非叶子节点就是最后一个节点的父节点
      * Last non-leaf node = parent of last-node = ((n - 1) - 1) / 2
      * 
@@ -312,13 +313,13 @@ int main(int argc, char const *argv[])
     minHeap.insert(1);
     printHeap(minHeap);
 
-    // 构建最小堆 
+    // 构建最大堆 
     std::cout << "********* 最大堆构建测试 ************" << std::endl;
     int arr2[] = { 10, 50, 15, 30, 40, 40, 100};
     auto maxHeap = MaxHeap<int>(10);
     maxHeap.createHeap(arr2, sizeof(arr2) / sizeof(arr2[0]));
     printHeap(maxHeap);
-    // 提取最小值
+    // 提取最大值
     auto max = maxHeap.extract();
     std::cout << "获取堆中最大元素: " << max << std::endl;
     printHeap(maxHeap);
