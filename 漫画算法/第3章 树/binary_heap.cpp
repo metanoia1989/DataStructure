@@ -23,7 +23,7 @@ void swap(T& t1, T& t2)
 
 
 /** 
- * 上浮调整，比较子节点与父节点的大小
+ * 上浮调整，比较子节点与父节点的大小，用于插入节点时使用
  * 
  * @param int arr[]  待调整的堆
  * @param int size 堆的大小
@@ -41,7 +41,7 @@ void upAdjust(int arr[], int size)
 }
 
 /** 
- * 下沉调整，比较父节点与左右节点的大小
+ * 下沉调整，比较父节点与左右节点的大小，用于删除节点时使用
  * 
  * @param int arr[]  待调整的堆
  * @param int size 堆的大小
@@ -49,18 +49,54 @@ void upAdjust(int arr[], int size)
  */ 
 void downAdjust(int arr[], int size, int parentIndex)
 {
-    int childIndex = 2 * parentIndex + 1; // 左子节点
-    while (childIndex < size ) {
-        // 如果有右孩子，并且右孩子小于左孩子的值，则定位到右孩子
-        if (childIndex + 1 < size && arr[childIndex + 1] < arr[childIndex]) {
-            childIndex++;
+    int smallest = parentIndex;
+
+    // 比较父节点与左右子节点的大小，父节点不是最小则进行交换值，不断下沉迭代
+    do {
+        int leftChild = 2 * smallest + 1;
+        int rightChild = 2 * smallest + 2;
+
+        if (leftChild < size && arr[leftChild] < arr[smallest]) {
+            smallest = leftChild;
         }
-        // 如果父节点小于任何一个孩子节点的值，则直接跳出
-        if (arr[parentIndex] < arr[childIndex]) {
-            break;
+        if (rightChild < size && arr[rightChild] < arr[smallest]) {
+            smallest = rightChild;
         }
-        swap(arr[parentIndex], arr[childIndex]);
-        parentIndex = childIndex;
-        childIndex = parentIndex * 2 + 1;
-    }
+        if (smallest != parentIndex) {
+            swap(arr[smallest], arr[parentIndex]);
+            parentIndex = smallest;
+        }
+    } while (smallest != parentIndex);
+}
+/**
+ * 输出打印一个数组
+ * 
+ * @param  {int []} arr 
+ */
+void printArray(int arr[], size_t size)
+{
+    std::cout << "数组输出：";
+    for (int i=0; i<size; i++)  {
+        std::cout << arr[i] << ", "; 
+    }   
+    std::cout << std::endl;
+}
+
+int main(int argc, char const *argv[])
+{
+    // 插入一个元素，上浮操作
+    int arr[] = { 1, 3, 2, 6, 5, 7, 8, 9, 10, 0};
+    int arr_size = sizeof(arr) / sizeof(arr[0]);
+    printArray(arr, arr_size);
+    upAdjust(arr, arr_size);
+    printArray(arr, arr_size);
+
+    int arr2[] = { 14, 3, 2, 6, 5, 7, 8, 9, 10 };
+    int arr_size2 = sizeof(arr2) / sizeof(arr2[0]);
+    printArray(arr2, arr_size2);
+    downAdjust(arr2, arr_size2, 0);
+    printArray(arr2, arr_size2);
+    // 删除一个元素，下沉操作
+
+    return 0;
 }
