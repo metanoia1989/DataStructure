@@ -6,3 +6,9 @@
 # MinGW generated files
 *.Debug
 *.Release
+
+# 编译缓存文件
+*.gch
+
+# 日志文件
+*.log
