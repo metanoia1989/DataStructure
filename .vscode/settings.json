@@ -4,6 +4,7 @@
         "*.wxss": "css",
         "*.wxs": "javascript",
         "*.tpl": "html",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "variant": "cpp"
     }
 }
