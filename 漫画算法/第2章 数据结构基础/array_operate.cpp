@@ -7,10 +7,10 @@ class array
 public:
     array() = delete;
 
-    array(int count = 10) 
+    array(int size = 10) 
     {
-        m_size = count;
-        m_arr = new T[m_size];
+        m_size = size;
+        auto a = new T[m_size];
     }
 
     ~array() 
@@ -39,6 +39,10 @@ public:
     
     /**
      * 插入新元素
+     * 数组元素插入的三种情况：
+     * 1. 尾部插入，直接把元素放在数组尾部的空闲位置即可
+     * 2. 中间插入
+     * 3. 超范围插入
      * @param  {int} index    
      * @param  {int} element  
      */
