@@ -1,5 +1,6 @@
 #include <cstdlib>
 #include <exception>
+#include <iostream>
 
 template <typename T>
 class array
@@ -9,8 +10,9 @@ public:
 
     array(int size = 10) 
     {
+        m_count = 0;
         m_size = size;
-        auto a = new T[m_size];
+        m_arr = new T[m_size];
     }
 
     ~array() 
@@ -48,7 +50,14 @@ public:
      */
     void insert(int index, int element)
     {
-        
+        if (index > m_count) { // 尾部插入
+            m_arr[m_count] = element;
+        } else if ( index < 0 || index > m_size) { // 中间插入
+            throw new overflow_error("非法的数组下标！");
+        }   
+        if (index == m_size) {
+            resize(); // 数组扩容 
+        }
     }
     
     /** 
@@ -59,7 +68,7 @@ public:
         
     }
     
-    T delete(int index)
+    T erase(int index)
     {
         if (index < 0 || index >= m_size) {
             throw new overflow_error("非法的数组下标！");
@@ -70,10 +79,18 @@ public:
         {
             m_arr[i] = m_arr[i+1];
         }
+        m_count--;
         return element;
     }
 
 private:
     T *m_arr;
     int m_size;
+    int m_count;
 };
+
+int main(int argc, char const *argv[])
+{
+    std::cout << "测试输出！" << std::endl;
+    return 0;
+}
