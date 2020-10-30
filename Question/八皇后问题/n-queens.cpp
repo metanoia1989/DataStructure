@@ -10,18 +10,14 @@
  * 怎么用枚举、回溯法来解决呢？这个问题看来真的有点难度了，之前抄人家的代码，没有理解其中的含义，白白浪费了时间     
  * 单个解法不难，但是找出所有的解法我有点不太懂怎么弄   
  * 其中一个关键点是检测皇后是否安全，不在同一行、不在同一列、不在统一斜线上 
- * queue 的 column 上没有其他棋子
- * queue 的 row 上没有其他棋子
- * 一般来说一列只会放一个，所以 column 不用检测了，检测 row 就可以了
+ * 一般来说一列只会放一个，所以列不用检测了，检测行是否冲突就可以了
+ *
+ * 找一个还好点，怎么找到所有的解呢？       
  */ 
 template <int N>
 class NQueensProblem
 {
 public:
-    NQueensProblem()
-    {
-    }
-
     /**
      * 输出皇后的位置
      */
@@ -64,7 +60,6 @@ public:
     /**
      * N皇后的求解方法，发现每一个皇后的位置
      * @param  {int} row : 皇后的序号
-     * @param  {int} n   : 皇后可能的位置
      * @return {bool}    : 
      */
     bool solve(int row)  
@@ -74,7 +69,7 @@ public:
             return true;
         }
         bool res = false; // N-Queens 是否有解
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) { // -> 调用N次 
             if (isSafe(i, row)) {
                 grid[row][i] = 1;
                 res = solve(row+1) || res;
