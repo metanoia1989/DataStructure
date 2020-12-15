@@ -73,7 +73,26 @@ int cycleLength(Node *head)
  */
 int circleStart(Node *head)
 {
-     
+    Node *p1 = head;
+    Node *p2 = head;
+    int start = -1;
+    
+    while (p2 != nullptr && p2->next != nullptr) {
+        p1 = p1->next;
+        p2 = p2->next->next;
+        if (p1 == p2) {
+            // 两个指针第一次相遇，将p1重置为起点
+            p1 = head;
+            start = 0;
+            while (p1 != p2) {
+                p1 = p1->next;
+                p2 = p2->next;
+                start++;
+            }
+            break;
+        }
+    }
+    return start;
 }
 
 int main(int argc, char const *argv[])
@@ -83,14 +102,20 @@ int main(int argc, char const *argv[])
     Node *node3 = new Node(7);
     Node *node4 = new Node(2);
     Node *node5 = new Node(6);
+    Node *node6 = new Node(8);
+    Node *node7 = new Node(1);
+    Node *node8 = new Node(2);
     node1->next = node2;
     node2->next = node3;
     node3->next = node4;
     node4->next = node5;
-    node5->next = node2;
+    node5->next = node6;
+    node6->next = node7;
+    node7->next = node4;
     
     std::cout << "此链表是否有环：" << isCycle(node1) << std::endl; 
     std::cout << "此链表的环长为：" << cycleLength(node1) << std::endl; 
+    std::cout << "此链表的入环节点为：" << circleStart(node1) << std::endl; 
 
     return 0;
 }
