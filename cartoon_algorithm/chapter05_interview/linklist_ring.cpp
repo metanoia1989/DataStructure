@@ -65,6 +65,16 @@ int cycleLength(Node *head)
     return length;
 }
 
+/**
+ * 获取链表环的起始点
+ *
+ * @param  {Node*} head : 
+ * @return {int}        : 
+ */
+int circleStart(Node *head)
+{
+     
+}
 
 int main(int argc, char const *argv[])
 {
