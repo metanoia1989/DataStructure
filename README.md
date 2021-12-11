@@ -6,15 +6,15 @@
 
 数据结构、算法、设计模式、高等数学、英语能力，这些我要一个个攻克下来，否则编程难以进步。
 
-* [图解算法 使用C语言](./图解算法使用C语言/) https://book.douban.com/subject/35035312/
-* [算法的乐趣](./AlgorithmDelight/) https://book.douban.com/subject/26351257/
-* [算法之美-隐匿在数据结构背后的原理](./BeautyAlgorithm/) https://book.douban.com/subject/30155731/
-* [C++数据结构与算法](./C++数据结构与算法/) https://book.douban.com/subject/26674051/
-* [漫画算法](./cartoon_algorithm/) https://book.douban.com/subject/33420587/
+* [图解算法 使用C语言](./图解算法使用C语言/) 
+* [算法的乐趣](./AlgorithmDelight/)
+* [算法之美-隐匿在数据结构背后的原理](./BeautyAlgorithm/)
+* [C++数据结构与算法](./C++数据结构与算法/) 
+* [漫画算法](./cartoon_algorithm/) 
 * [数据结构的自己实现](./DataStructure/) 自己对困难的数据结构的实现练习
-* [Programiz 数据结构算法教程](./programiz/) https://www.programiz.com/dsa
-* [leetcode](./leetcode/) https://leetcode.com/
+* [Programiz 数据结构算法教程](./programiz/) 
+* [leetcode](./leetcode/) 
 * [Question](./Question/) 一些算法问题
-* [ElementaryAlgorithm](./ElementaryAlogrithms/) https://book.douban.com/subject/26931430/ 
+* [ElementaryAlgorithm](./ElementaryAlogrithms/) 
 
 不知道那些开源软件的README.txt是怎么做到宽度限制的，手动去动肯定很麻烦，一定有相关的工具。  
