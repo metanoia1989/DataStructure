@@ -6,36 +6,15 @@
 
 数据结构、算法、设计模式、高等数学、英语能力，这些我要一个个攻克下来，否则编程难以进步。
 
+* [图解算法 使用C语言](./图解算法使用C语言/README.md) https://book.douban.com/subject/35035312/
+* [算法的乐趣](./AlgorithmDelight/README.md) https://book.douban.com/subject/26351257/
+* [算法之美-隐匿在数据结构背后的原理](./BeautyAlgorithm/README.md) https://book.douban.com/subject/30155731/
+* [C++数据结构与算法](./C++数据结构与算法/README.md) https://book.douban.com/subject/26674051/
+* [漫画算法](./cartoon_algorithm/README.md) https://book.douban.com/subject/33420587/
+* [数据结构的自己实现](./DataStructure/REAMDE.md) 自己对困难的数据结构的实现练习
+* [Programiz 数据结构算法教程](./programiz/README.md) https://www.programiz.com/dsa
+* [leetcode](./leetcode/README.md) https://leetcode.com/
+* [Question](./Question/README.md) 一些算法问题
+* [ElementaryAlgorithm](./ElementaryAlogrithms/README.md) https://book.douban.com/subject/26931430/ 
 
-# C++数据结构与算法
-这个项目根据 C++数据结构与算法 学习的。
-章节目录：
-1. C++面向对象程序设计
-2. 算法复杂度分析
-3. 链表 
-4. 栈与队列
-5. 递归
-6. 二叉树
-7. 多叉树
-8. 图
-9. 排序算法
-10. 散列
-11. 数据压缩
-12. 内存管理
-13. 字符串匹配
-
-
-附带参考的教程：[数据结构C语言版教程](http://c.biancheng.net/data_structure/)
-
-
-# programiz的数据结构算法教程
-这个网站的教程，都是很简单很容易入门的，遍历、判断啊，都是用递归实现的，简单而清楚。    
-
-
-## 链表 
-链表的遍历、插入和删除
-
-head 表示链表的头节点，链表的尾节点指向NULL。       
-
-**遍历链表**：current 临时指针，从head节点开始，不断往后移动，直到为null，就是达到链表的尾端了。        
-**链表添加节点**：   
+不知道那些开源软件的README.txt是怎么做到宽度限制的，手动去动肯定很麻烦，一定有相关的工具。  
