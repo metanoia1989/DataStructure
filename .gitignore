@@ -12,3 +12,6 @@
 
 # 日志文件
 *.log
+
+# jupyter 文件
+.ipynb_checkpoints/
