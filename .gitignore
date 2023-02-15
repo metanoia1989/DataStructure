@@ -2,6 +2,7 @@
 # --------
 *.dll
 *.exe
+*.out
 
 # MinGW generated files
 *.Debug
