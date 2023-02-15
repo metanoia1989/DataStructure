@@ -105,8 +105,6 @@ public:
   void remove(int k);
 
   int getMinKeyCount();
-
-  int minKeyCount();
 };
 
 // Constructor for BTreeNode class
