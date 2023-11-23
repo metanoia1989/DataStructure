@@ -98,6 +98,9 @@ public:
   // function to search a key in this tree
   BTreeNode *search(int k) { return (root == NULL) ? NULL : root->search(k); }
 
+  // 这些难的数据结构，最难的就是 insert 和 remove，这两个操作会变动数据结构，需要始终保证数据结构的特性  
+  // search 和 traverse 是相似的  
+
   // The main function that inserts a new key in this B-Tree
   void insert(int k);
 
@@ -556,6 +559,8 @@ void BTree::insert(int k)
       root->insertNonFull(k);
   }
 }
+// 这个插入的代码很高明啊，我自己是绝对写不出来的，想破脑袋都不知道怎么写，看网上别人的实现又是太复杂了。 
+// BTree类插入新值时只负责根节点，根节点未满时调用根节点的插入方法，已满则分裂根节点加入新的根节点，然后再调用根节点的插入方法。  
 
 // The main function that finds the minimum number of keys that
 // the B-Tree node has. It mainly uses the minKey function

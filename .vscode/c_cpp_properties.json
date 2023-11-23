@@ -1,11 +1,11 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${default}",
-                "D:/Program/msys64/mingw64/include/c++/10.2.0/**"
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/",
             ],
             "defines": [
                 "_DEBUG",
@@ -14,8 +14,8 @@
             ],
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-x64"
+            "cppStandard": "c++11",
+            "intelliSenseMode": "macos-clang-arm64"
         }
     ],
     "version": 4
